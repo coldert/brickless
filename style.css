@@ -1,0 +1,18 @@
+body {
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+#container {
+    width: 480px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+canvas {
+  background: #def;
+  display: block;
+  margin: 0 auto;
+}
