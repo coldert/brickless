@@ -73,7 +73,7 @@ var Ball = function (defaults) {
             audioWall.play();
         }
         // Hit paddle
-        if (this.dy > 0 && this.x >= paddle.x && this.x <= paddle.x + paddle.width && this.y > canvas.height - paddle.height - this.radius && this.y < canvas.height - this.radius) {
+        if (this.dy > 0 && this.x >= paddle.x - paddle.hitAreaModifier && this.x <= paddle.x + paddle.width + paddle.hitAreaModifier && this.y > canvas.height - paddle.height - this.radius && this.y < canvas.height - this.radius) {
             audioPaddle.play();
             this.dx *= this.dxMultiplier;
             this.dy *= this.dyMultiplier;
@@ -106,6 +106,7 @@ var Paddle = function () {
     this.width = 80;
     this.speed = 5;
     this.padding = 5;
+    this.hitAreaModifier = 5;
     this.x = (canvas.width - this.width) / 2;
     this.y = canvas.height - this.height - this.padding;
     
