@@ -14,6 +14,8 @@ var audioHiScore = new Audio("highscore.mp3");
 var score = 0;
 var tempScore = 0;
 var highScore = 0;
+// DEBUG MESSAGE
+var debug_msg = "";
 
 // UPDATE TEMP SCORE
 function updateTempScore() {
@@ -30,6 +32,9 @@ function drawScore() {
     ctx.fillText("Count: " + tempScore, canvas.width / 2, 23);
     ctx.textAlign = "right";
     ctx.fillText("High score: " + highScore, canvas.width - 10, 23);
+    // DEBUG OUTPUT
+    ctx.textAlign = "left";
+    ctx.fillText(debug_msg, 10, 43);
 }
 
 // BALL
@@ -176,15 +181,18 @@ document.addEventListener("keyup", function (e) {
 canvas.addEventListener("touchstart", function (e) {
     if (e.changedTouches[0].clientX < document.width / 2) {
         pressLeft = true;
+        debug_msg = "TOUCH LEFT";
         e.preventDefault();
     } else if (e.changedTouches[0].clientX > document.width / 2) {
         pressRight = true;
+        debug_msg = "TOUCH RIGHT";
         e.preventDefault();
     }
 }, false);
 canvas.addEventListener("touchend", function (e) {
     pressLeft = false;
     pressRight = false;
+    debug_msg = "";
     e.preventDefault();
 }, false);
 
