@@ -173,7 +173,7 @@ document.addEventListener("keyup", function (e) {
 }, false);
 
 // TOUCH CONTROL HANDLING
-document.addEventListener("touchstart", function (e) {
+canvas.addEventListener("touchstart", function (e) {
     if (e.changedTouches[0].clientX < document.width / 2) {
         pressLeft = true;
         e.preventDefault();
@@ -182,7 +182,7 @@ document.addEventListener("touchstart", function (e) {
         e.preventDefault();
     }
 }, false);
-document.addEventListener("touchend", function (e) {
+canvas.addEventListener("touchend", function (e) {
     pressLeft = false;
     pressRight = false;
     e.preventDefault();
