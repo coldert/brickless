@@ -179,21 +179,20 @@ document.addEventListener("keyup", function (e) {
 
 // TOUCH CONTROL HANDLING
 window.addEventListener("touchstart", function (e) {
+    e.preventDefault();
     if (e.changedTouches[0].clientX < document.width / 2) {
         pressLeft = true;
         debug_msg = "TOUCH LEFT";
-        e.preventDefault();
     } else if (e.changedTouches[0].clientX > document.width / 2) {
         pressRight = true;
         debug_msg = "TOUCH RIGHT";
-        e.preventDefault();
     }
 }, false);
 window.addEventListener("touchend", function (e) {
+    e.preventDefault();
     pressLeft = false;
     pressRight = false;
     debug_msg = "";
-    e.preventDefault();
 }, false);
 
 // INITIALIZE GAME
