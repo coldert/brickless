@@ -178,7 +178,7 @@ document.addEventListener("keyup", function (e) {
 }, false);
 
 // TOUCH CONTROL HANDLING
-canvas.addEventListener("touchstart", function (e) {
+window.addEventListener("touchstart", function (e) {
     if (e.changedTouches[0].clientX < document.width / 2) {
         pressLeft = true;
         debug_msg = "TOUCH LEFT";
@@ -189,7 +189,7 @@ canvas.addEventListener("touchstart", function (e) {
         e.preventDefault();
     }
 }, false);
-canvas.addEventListener("touchend", function (e) {
+window.addEventListener("touchend", function (e) {
     pressLeft = false;
     pressRight = false;
     debug_msg = "";
