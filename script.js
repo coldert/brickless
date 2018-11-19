@@ -15,7 +15,7 @@ var score = 0;
 var tempScore = 0;
 var highScore = 0;
 // DEBUG MESSAGE
-var debug_msg = "";
+var debug_msg = "START";
 
 // UPDATE TEMP SCORE
 function updateTempScore() {
