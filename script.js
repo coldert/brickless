@@ -31,7 +31,7 @@ function drawScore() {
     ctx.textAlign = "center";
     ctx.fillText("Count: " + tempScore, canvas.width / 2, 23);
     ctx.textAlign = "right";
-    ctx.fillText("High score: " + highScore + "\n" + debug_msg, canvas.width - 10, 23);
+    ctx.fillText("High score: " + highScore, canvas.width - 10, 23);
     // DEBUG OUTPUT
     ctx.textAlign = "left";
     ctx.fillText(debug_msg, 10, 43);
