@@ -180,6 +180,7 @@ document.addEventListener("keyup", function (e) {
 // TOUCH CONTROL HANDLING
 canvas.addEventListener("touchstart", function (e) {
     e.preventDefault();
+    debug_msg = "TOUCH";
     if (e.changedTouches[0].pageX < document.width / 2) {
         pressLeft = true;
         debug_msg = "TOUCH LEFT";
