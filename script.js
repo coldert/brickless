@@ -178,7 +178,7 @@ document.addEventListener("keyup", function (e) {
 }, false);
 
 // TOUCH CONTROL HANDLING
-window.addEventListener("touchstart", function (e) {
+canvas.addEventListener("touchstart", function (e) {
     e.preventDefault();
     if (e.changedTouches[0].pageX < document.width / 2) {
         pressLeft = true;
@@ -188,7 +188,7 @@ window.addEventListener("touchstart", function (e) {
         debug_msg = "TOUCH RIGHT";
     }
 }, false);
-window.addEventListener("touchend", function (e) {
+canvas.addEventListener("touchend", function (e) {
     e.preventDefault();
     pressLeft = false;
     pressRight = false;
