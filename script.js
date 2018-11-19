@@ -180,10 +180,10 @@ document.addEventListener("keyup", function (e) {
 // TOUCH CONTROL HANDLING
 window.addEventListener("touchstart", function (e) {
     e.preventDefault();
-    if (e.changedTouches[0].clientX < document.width / 2) {
+    if (e.changedTouches[0].pageX < document.width / 2) {
         pressLeft = true;
         debug_msg = "TOUCH LEFT";
-    } else if (e.changedTouches[0].clientX > document.width / 2) {
+    } else if (e.changedTouches[0].pageX > document.width / 2) {
         pressRight = true;
         debug_msg = "TOUCH RIGHT";
     }
